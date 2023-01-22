@@ -1,0 +1,39 @@
+﻿
+
+@model List<IMS.Models.Domain.Register>
+
+<h1> User Data</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+             <th>Gender</th>
+            <th>Contact</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var register in Model)
+        {
+            <tr>
+                <td> @register.ID</td>
+                <td>@register.name</td>
+                <td>@register.address</td>
+                <td>@register.gender</td>
+                <td>@register.Contact</td>
+                <td>@register.Dob</td>
+                <td>@register.email</td>
+                <td>@register.password</td>
+                <td><a href="Register/View/@register.ID">View</a></td>
+            </tr>
+            
+        }
+      
+    </tbody>
+</table>
